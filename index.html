@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="./main.css" rel="stylesheet" >
+	<script src="./main.js"> </script>
+	<title>Path Finding Simulator</title>
+</head>
+<body>
+	<div class="row">
+		<div id="actions-area">
+			<div class="w-100">
+				<button onclick="toggleMode(0)" class="action_button">
+					Choose start point
+				</button>
+				<button onclick="toggleMode(1)" class="action_button">
+					Choose end point
+				</button>
+				<button onclick="toggleMode(2)" class="action_button">
+					Build obstacles
+				</button>
+				<button onclick="generateRandomConfiguration()" class="action_button">
+					Add obstacles
+				</button>
+				<button onclick="window.location.reload()" class="action_button">
+					Reset
+				</button>
+				<button onclick="simulatePathFinding()" class="action_button">
+				Start Simulation
+				</button>
+			</div>			
+		</div>
+	</div>
+	<div class="row d-flex">
+		<div id="options-area">
+			<div class="option-wrapper">
+				<p>Simulation Speed</p>
+				<div style="text-align: center;">
+				<button onclick="modifySimulationSpeed(250)">Low</button>
+				<button onclick="modifySimulationSpeed(100)">Medium</button>
+				<button onclick="modifySimulationSpeed(50)">High</button>
+				</div>
+			</div>
+		</div>
+		<div id="grid-area-wrapper">
+			<div id="grid-area" class="minimized"></div>
+		</div>
+		<div id="stats-area">
+			<div class="legend">
+				<div>
+					<div class="legend-item"><span class="grid-cell-legend" style="background-color: orange"></span> <span>Starting point</span></div>
+				</div>
+				<div>
+					<div class="legend-item"><span class="grid-cell-legend" style="background-color: #007E33"></span> Ending point</div>
+				</div>
+				<div>
+					<div class="legend-item"><span class="grid-cell-legend" style="background-color: #333"></span> Obstacle</div>
+				</div>						
+			</div>
+			<div class="filled-area-info">
+				<span>Filled area : </span> <span id="filled-area-value">0</span>%
+			</div>
+			<div id="path_info">
+				
+			</div>
+		</div>
+	</div>
+</body>
+</html>
