@@ -163,12 +163,14 @@ function getRandomPosition()
 
 function generateRandomConfiguration()
 {
+	/**
 	var start_x = getRandomPosition();
 	var start_y = getRandomPosition();
 	changeStartPoint(getGridCellUsingIndices(start_x,start_y));
 	var end_x = getRandomPosition();
 	var end_y = getRandomPosition();
 	changeEndPoint(getGridCellUsingIndices(end_x,end_y));
+	**/
 	for(var i=0;i<OBSTACLES_RANDOM_BUILD_COUNT;i++)
 	{
 		var obstacle_x = getRandomPosition();
