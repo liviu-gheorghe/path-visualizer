@@ -18,6 +18,7 @@ var OBSTACLES = [];
 var CELL_FILL_DELAY = 100;
 var fill_info_update_interval;
 var filled_cells_count = 0;
+var simulation_started = false;
 
 function modifySimulationSpeed(milliseconds)
 {
@@ -250,6 +251,12 @@ function fillPath()
 
 function simulatePathFinding()
 {
+
+	if(simulation_started == true) {
+		console.log("Simulation pending or restart required");
+		return;
+	}
+	simulation_started = true;
 	mat = new Array(ROWS_COUNT+1);
 	for(var i=0;i<=ROWS_COUNT;i++)
 	{

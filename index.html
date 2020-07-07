@@ -2,8 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<link href="./main.css" rel="stylesheet" >
-	<script src="./main.js"> </script>
+	<link href="./css/main.css" rel="stylesheet" >
+	<script src="./js/main.js"> </script>
 	<title>Path Finding Simulator</title>
 </head>
 <body>
@@ -17,10 +17,10 @@
 					Choose end point
 				</button>
 				<button onclick="toggleMode(2)" class="action_button">
-					Build obstacles
+					Add obstacles
 				</button>
 				<button onclick="generateRandomConfiguration()" class="action_button">
-					Add obstacles
+					Generate obstacles
 				</button>
 				<button onclick="window.location.reload()" class="action_button">
 					Reset
@@ -28,7 +28,7 @@
 				<button onclick="simulatePathFinding()" class="action_button">
 				Start Simulation
 				</button>
-			</div>			
+			</div>
 		</div>
 	</div>
 	<div class="row d-flex">
@@ -36,9 +36,9 @@
 			<div class="option-wrapper">
 				<p>Simulation Speed</p>
 				<div style="text-align: center;">
-				<button onclick="modifySimulationSpeed(250)">Low</button>
-				<button onclick="modifySimulationSpeed(100)">Medium</button>
-				<button onclick="modifySimulationSpeed(50)">High</button>
+				<button onclick="modifySimulationSpeed(250)" class="speed_button">Low</button>
+				<button onclick="modifySimulationSpeed(100)" class="speed_button">Medium</button>
+				<button onclick="modifySimulationSpeed(50)" class="speed_button">High</button>
 				</div>
 			</div>
 		</div>
@@ -48,10 +48,10 @@
 		<div id="stats-area">
 			<div class="legend">
 				<div>
-					<div class="legend-item"><span class="grid-cell-legend" style="background-color: orange"></span> <span>Starting point</span></div>
+					<div class="legend-item"><span class="grid-cell-legend" style="background-color: #df4a16"></span> <span>Start point</span></div>
 				</div>
 				<div>
-					<div class="legend-item"><span class="grid-cell-legend" style="background-color: #007E33"></span> Ending point</div>
+					<div class="legend-item"><span class="grid-cell-legend" style="background-color: #007E33"></span> End point</div>
 				</div>
 				<div>
 					<div class="legend-item"><span class="grid-cell-legend" style="background-color: #333"></span> Obstacle</div>
